@@ -12,4 +12,4 @@ RUN dotnet publish "VillaniaLIBRARYAPI.csproj" -c Realease -o /app/out
 FROM base AS final
 WORKDIR /app
 COPY --from-build /app/out .
-ENTRYPOINT ["dotnet", "VillaniaLIBRARYNowAPI.dll"]
+ENTRYPOINT ["dotnet", "VillaniaLIBRARYAPI.dll"]
