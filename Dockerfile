@@ -6,7 +6,7 @@ ENV ASPNETCORE_URLS=http://+:8080
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 As build
 WORKDIR / src
 COPY . .
-RUN dotnet restore "VillaniaLIBRARYAPI/.VillaniaLIBRARYAPIcsproj"
+RUN dotnet restore "VillaniaLIBRARYAPI/VillaniaLIBRARYAPI.csproj"
 RUN dotnet publish "VillaniaLIBRARYAPI/VillaniaLIBRARYAPI.csproj" -c Realease -o /app/out
 
 FROM base AS final
